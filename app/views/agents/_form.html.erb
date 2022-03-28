@@ -1,0 +1,11 @@
+<%= form_with(model: @agent) do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %> 
+<%= f.label :passord %>
+<%= f.text_field :password %>
+<%= f.label :phone %> 
+<%= f.text_field :phone %> 
+<%= f.label :broker %>
+<%= f.text_field :broker %> 
+<%= f.submit %> 
+<% end %>

@@ -1,0 +1,20 @@
+<h1>
+    Address: <%= @house.address %>
+</h1>
+<ul>
+    <li>
+        rooms: <%= @house.rooms %>
+    </li>
+    <li>
+        bathrooms: <%= @house.bathrooms %>
+    </li>
+    <li>
+        square feet: <%= @house.sqfeet %>
+    </li>
+    <li>
+        price: <%= @house.price %>
+    </li>
+    <li>
+        <td>Listed By: <%= house.agent.name if house.agent</td>
+    </li>
+</ul>

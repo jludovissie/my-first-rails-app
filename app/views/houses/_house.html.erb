@@ -1,0 +1,8 @@
+<% @houses.each do |house| %>
+
+<%= link_to house.address, house_path(house) %>
+    by: <%= house.agent.name if house.agent%>
+  
+        <small>Created <%= time_ago_in_words(house.created_at) %> ago, edited <%= time_ago_in_words(house.updated_at) %></small>
+   
+<% end %>

@@ -1,0 +1,6 @@
+<h1>Western KY realtors </h1>
+
+<% @agents.each do |agent| %> 
+<%= link_to agent.name, agent %> 
+<%= agent.houses.count  %>
+<% end %>

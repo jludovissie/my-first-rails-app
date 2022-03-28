@@ -1,0 +1,23 @@
+<h1>Edit <%= @house.address %></h1>
+
+
+<% if  @house.errors.any? %> 
+  <% @house.errors.full_messages.each do |msg| %>   
+    <%= msg %>
+  <% end %>
+<% end %>  
+
+
+<%= form_with(model: @house, url: houses_path) do |form| %>
+  <%= form.label :address, "Address" %>
+  <%= form.text_field :address %>
+  <%= form.label :price, "Price" %>
+  <%= form.text_field :price %>
+  <%= form.label :sqfeet, "Square Feet" %>
+  <%= form.text_field :sqfeet %>
+  <%= form.label :rooms, "Rooms" %>
+  <%= form.text_field :rooms %>
+  <%= form.label :bathrooms, "Bathrooms" %>
+  <%= form.text_field :bathrooms %>
+  <%= form.submit %>
+<% end %>
